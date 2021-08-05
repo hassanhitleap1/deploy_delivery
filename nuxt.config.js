@@ -13,11 +13,17 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' }
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' },
+      {rel: "stylesheet",href:"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"}
+
 
     ],
     script:[
-        {type: "text/javascript",src:"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"}
+        {type: "text/javascript",src:"https://code.jquery.com/jquery-3.4.1.slim.min.js"},
+        {type: "text/javascript",src:"https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"},
+      {type: "text/javascript",src:"https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"},
+        {type: "text/javascript",src:"https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"}
+
     ]
   },
   /*
