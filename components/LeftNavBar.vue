@@ -7,29 +7,21 @@
       <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
         <li class="nav-item">
           <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
-            <i class="bi-house fs-1"></i>
+            <NuxtLink to="/"  class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="area"> <i class="bi-house fs-1"></i></NuxtLink>
           </a>
         </li>
         <li>
           <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
-            <i class="bi-speedometer2 fs-1"></i>
+            <NuxtLink to="/regions"  class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="area"> <i class="bi-house fs-1"></i></NuxtLink>
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
-            <i class="bi-table fs-1"></i>
-          </a>
+          <NuxtLink to="/areas"  class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="area"> <i class=" bi bi-map fs-1"></i></NuxtLink>
         </li>
         <li>
-          <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
-            <i class="bi-heart fs-1"></i>
-          </a>
+          <NuxtLink to="/users"  class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="area"> <i class="bi-people fs-1"></i></NuxtLink>
         </li>
-        <li>
-          <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
-            <i class="bi-people fs-1"></i>
-          </a>
-        </li>
+
       </ul>
       <div class="dropdown">
         <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
