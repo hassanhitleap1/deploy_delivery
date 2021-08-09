@@ -67,7 +67,7 @@ export default {
     strategies: {
       local: {
         token: {
-          property: 'token',
+          property: 'meta.token',
           global: true
           // required: true,
           // type: 'Bearer'

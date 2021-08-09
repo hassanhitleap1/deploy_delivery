@@ -8,14 +8,14 @@
               <h1>Login</h1>
             </div>
           </div>
-          <form action="" method="post" name="login">
+          <form @submit.prevent="login" >
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+              <label for="uname">Email address</label>
+              <input type="text"  v-model="form.uname" name="uname"  class="form-control" id="uname"  placeholder="Enter uname">
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Password</label>
-              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+              <label for="password">Password</label>
+              <input type="password"  v-model="form.password" name="password" id="password"  class="form-control"  placeholder="Enter Password">
             </div>
             <div class="form-group">
               <p class="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
@@ -29,13 +29,6 @@
 
               </div>
             </div>
-            <div class="col-md-12 mb-3">
-              <p class="text-center">
-                <a href="javascript:void();" class="google btn mybtn"><i class="fa fa-google-plus">
-                </i> Signup using Google
-                </a>
-              </p>
-            </div>
             <div class="form-group">
               <p class="text-center"> <NuxtLink to="/auth/singup"> singup here  </NuxtLink></p>
             </div>
@@ -45,13 +38,31 @@
       </div>
     </div>
   </div>
-  </div>
+
 </template>
 
 <script>
     export default {
         name: "login",
         layout: 'auth',
+        data(){
+            return {
+                form:{
+                    uname:"",
+                    password:""
+                }
+            }
+        },
+        methods: {
+            async login() {
+                await this.$auth.login({
+                    data: this.form
+                });
+                this.$router.push({
+                    path: '/'
+                });
+            }
+        }
     }
 </script>
 
