@@ -67,7 +67,7 @@ export default {
     strategies: {
       local: {
         token: {
-          property: 'meta.token',
+          property: 'token',
           global: true
           // required: true,
           // type: 'Bearer'
@@ -83,7 +83,7 @@ export default {
         }
       }
     }
-  } ,
+  },
   /*
   ** Build configuration
   */

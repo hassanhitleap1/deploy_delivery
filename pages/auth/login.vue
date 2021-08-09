@@ -8,14 +8,14 @@
               <h1>Login</h1>
             </div>
           </div>
-          <form @submit.prevent="login" >
+          <form @submit.prevent="userLogin" >
             <div class="form-group">
               <label for="uname">Email address</label>
-              <input type="text"  v-model="form.uname" name="uname"  class="form-control" id="uname"  placeholder="Enter uname">
+              <input type="text"  v-model="login.username" name="uname"  class="form-control" id="uname"  placeholder="Enter uname">
             </div>
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password"  v-model="form.password" name="password" id="password"  class="form-control"  placeholder="Enter Password">
+              <input type="password"  v-model="login.password" name="password" id="password"  class="form-control"  placeholder="Enter Password">
             </div>
             <div class="form-group">
               <p class="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
@@ -45,22 +45,22 @@
     export default {
         name: "login",
         layout: 'auth',
-        data(){
+        data() {
             return {
-                form:{
-                    uname:"",
-                    password:""
+                login: {
+                    username: '',
+                    password: ''
                 }
             }
         },
         methods: {
-            async login() {
-                await this.$auth.login({
-                    data: this.form
-                });
-                this.$router.push({
-                    path: '/'
-                });
+            async userLogin() {
+                try {
+                    let response = await this.$auth.loginWith('local', { data: this.login })
+                    console.log(response)
+                } catch (err) {
+                    console.log(err)
+                }
             }
         }
     }
