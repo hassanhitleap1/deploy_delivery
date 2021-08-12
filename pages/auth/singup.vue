@@ -10,24 +10,24 @@
           </div>
           <form action="" method="post" name="login">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+              <label >Email address</label>
+              <input type="email" name="email"  class="form-control"  v-model="form.email" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">name</label>
-              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+              <label >Name</label>
+              <input type="text" name="email"  class="form-control"  aria-describedby="emailHelp" placeholder="Enter you Name">
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Password</label>
-              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+              <label >Password</label>
+              <input type="password" name="password"  class="form-control"  placeholder="Enter Password">
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail1"> confirm password </label>
-              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+              <label > confirm password </label>
+              <input type="password" name="conf-password"  class="form-control" placeholder="confirm password ">
             </div>
             <div class="form-group">
-              <p class="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
+                <p class="text-center"> <NuxtLink to="/auth/singup"> login   </NuxtLink></p>
             </div>
             <div class="col-md-12 text-center ">
               <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
@@ -56,12 +56,11 @@
       </div>
     </div>
   </div>
-  </div>
 </template>
 
 <script>
     export default {
-        name: "login",
+        name: "singup",
         layout: 'auth',
     }
 </script>
